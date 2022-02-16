@@ -1,0 +1,24 @@
+ALGORITHM three_nb_add
+VAR
+    Sentence:STRING;
+    Char_number:intiger:=0;
+    Word_number:intiger:=1;
+    Vowels_number:intiger:0;
+    i:INTEGER;
+
+BEGIN
+    Sentence:=Write("enter a Sentence.")
+    Read(Sentence)
+    FOR i FROM 0 TO Sentence.length STEP step  DO
+    Char_number ++;
+    IF (Sentence[i]="") THEN
+        Word_number ++;
+    END_IF
+    IF (Sentence[i]=="a" or Sentence[i]=="e"  or Sentence[i]=="i" or Sentence[i]=="o" or Sentence[i]=="u" or Sentence[i]=="y") THEN
+        Vowels_number ++;
+    END_IF
+    END_FOR
+    Write(Char_number)
+    Write(Word_number)
+    Write(Vowels_number)
+END
