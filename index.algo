@@ -9,6 +9,7 @@ VAR
 BEGIN
     Sentence:=Write("enter a Sentence.")
     Read(Sentence)
+    Sentence:=Sentence.lowercase();
     FOR i FROM 0 TO Sentence.length STEP step  DO
     Char_number ++;
     IF (Sentence[i]="") THEN
