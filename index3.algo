@@ -1,0 +1,46 @@
+PROCEDURE dot_product(VAR v1,v2:FLOAT)
+VAR
+    x:FLOAT;
+    n,i,j:INTEGER:=0;
+    t1,t2:ARRAY_OF FLOAT[];
+BEGIN
+    x:=0;
+    t1:=[v1];
+    Read(t1);
+    t2:=[v2];
+    Read(t2);
+    FOR i FROM 0 TO t1.length-1 STEP 1  DO
+        FOR j FROM 0 TO t2.length-1 STEP 1  DO
+            x:=x+t1[i]*t2[j];
+            break;
+        END_FOR
+    END_FOR
+            IF (x=0) THEN
+                Write("v1 and v2 are orthogonal");
+            END_IF
+END
+
+//function
+
+FUNCTION dot_product(v1,v2,x): FLOAT 
+VAR
+    
+    v1,v2,x:FLOAT
+    n,i,j:INTEGER:=0;
+    t1,t2:ARRAY_OF FLOAT[];
+BEGIN
+    x:=0;
+    t1=[v1];
+    Read(t1);
+    t2=[v2];
+    Read(t2);
+    FOR i FROM 0 TO t1.length-1 STEP 1  DO
+        FOR j FROM 0 TO t2.length-1 STEP 1  DO
+            x:=x+t1[i]*t2[j];
+            break;
+        END_FOR
+    END_FOR
+            IF (t1[i]*t2[j]=0) THEN
+                return Write("v1 and v2 are orthogonal");
+            END_IF
+END
